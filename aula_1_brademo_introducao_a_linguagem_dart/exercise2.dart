@@ -17,7 +17,7 @@ class House {
 }
 
 void main() {
-  House casa1 = new House(1, "Casa Geminada", 180000);
+  House casa1 = new House(1, "Casa geminada", 180000);
   House casa2 = new House(2, "Sobrado", 800000);
   House casa3 = new House(3, "Apartamento", 350000);
 
