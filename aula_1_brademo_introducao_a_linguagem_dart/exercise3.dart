@@ -5,6 +5,10 @@ class Animal {
 
   Animal(this._id, this._nome, this._cor);
 
+  int get id => _id;
+  String get nome => _nome;
+  String get cor => _cor;
+
   void imprimirDetalhes() {
     print("Id: ${_id}");
     print("Nome: ${_nome}");
@@ -17,6 +21,9 @@ class Cat extends Animal {
 
   Cat(int id, String nome, String cor, this._som) : super(id, nome, cor);
 
+  String get som => _som;
+
+  @override
   void imprimirDetalhes() {
     super.imprimirDetalhes();
     print("Som: ${_som}");
