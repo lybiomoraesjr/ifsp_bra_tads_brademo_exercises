@@ -1,3 +1,3 @@
-# flutter_application_1
+# ex2
 
 A new Flutter project.
