@@ -29,7 +29,6 @@ class MyHomePage extends StatelessWidget {
             SizedBox(height: 20),
             TextButton(
               onPressed: () => (),
-              child: const Text("A button"),
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(Colors.blue),
                 foregroundColor: WidgetStateProperty.all(Colors.white),
@@ -42,6 +41,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              child: const Text("A button"),
             ),
           ],
         ),
