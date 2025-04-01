@@ -19,13 +19,15 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('My Home Page')),
+      appBar: AppBar(title: const Text('My Home Page'), centerTitle: true),
 
       body: Center(
         child: Column(
           children: <Widget>[
-            const Text("Hello, World!", style: TextStyle(color: Colors.blue,
-            fontSize: 20)),
+            const Text(
+              "Hello, World!",
+              style: TextStyle(color: Colors.blue, fontSize: 20),
+            ),
             SizedBox(height: 20),
             TextButton(
               onPressed: () => (),
