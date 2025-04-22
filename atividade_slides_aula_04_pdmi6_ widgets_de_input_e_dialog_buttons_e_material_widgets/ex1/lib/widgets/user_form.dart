@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/user.dart';
+import 'package:flutter_application_1/widgets/custom_text_field.dart';
+import 'package:flutter_application_1/widgets/date_picker_field.dart';
 
 class UserForm extends StatefulWidget {
   const UserForm({super.key});
@@ -55,35 +57,20 @@ class _UserFormState extends State<UserForm> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            TextFormField(
+            CustomTextField(
               controller: nameController,
-              decoration: const InputDecoration(
-                labelText: 'Name',
-                prefixIcon: Icon(Icons.person),
-              ),
+              label: 'Name',
+              icon: Icons.person,
               validator: (value) => value!.isEmpty ? 'Enter your name' : null,
             ),
-
-            TextFormField(
+            CustomTextField(
               controller: phoneController,
-              decoration: const InputDecoration(
-                labelText: 'Phone',
-                prefixIcon: Icon(Icons.phone),
-              ),
+              label: 'Phone',
+              icon: Icons.phone,
               keyboardType: TextInputType.phone,
               validator: (value) => value!.isEmpty ? 'Enter your phone' : null,
             ),
-
-            TextFormField(
-              controller: dobController,
-              readOnly: true,
-              onTap: _selectDate,
-              decoration: const InputDecoration(
-                labelText: 'DOB',
-                prefixIcon: Icon(Icons.calendar_today),
-              ),
-              validator: (value) => value!.isEmpty ? 'Enter your DOB' : null,
-            ),
+            DatePickerField(controller: dobController, onTap: _selectDate),
             const SizedBox(height: 16),
             ElevatedButton(onPressed: _submit, child: const Text('Submit')),
           ],
