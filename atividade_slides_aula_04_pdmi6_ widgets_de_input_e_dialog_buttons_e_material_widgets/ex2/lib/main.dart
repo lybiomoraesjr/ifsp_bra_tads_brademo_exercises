@@ -1,3 +1,5 @@
+import 'package:dsa/constants/theme.dart';
+import 'package:dsa/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Bottom App Bar',
+      theme: customTheme,
+      home: HomePage(),
     );
   }
 }
