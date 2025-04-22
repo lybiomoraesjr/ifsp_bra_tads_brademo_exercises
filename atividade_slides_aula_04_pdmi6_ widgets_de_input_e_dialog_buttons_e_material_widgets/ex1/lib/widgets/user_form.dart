@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/model/user.dart';
+import 'package:flutter_application_1/models/user.dart';
 
 class UserForm extends StatefulWidget {
   const UserForm({super.key});
